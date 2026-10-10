@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "slug": "encoding-roundtrip-audit",
+  "domain": "filesystem",
+  "guidance_group": "maximal",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/encoding-roundtrip-audit",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/encoding-roundtrip-audit",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "OPTIONAL_MYTEST.md",
+      "size_bytes": 3080,
+      "sha256": "377811f43d46b8df1469a912361ab8a2abf344e939e33ed0bca1631409f8dc17",
+      "git_blob_sha1": "9298c9a7a4f74ff0cefc85eac5fdcac40f789839",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/OPTIONAL_MYTEST.md"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3628,
+      "sha256": "44a0fc501a1da37566e01c30a9c63163db5975fa1f7814c8510b047bcf523c81",
+      "git_blob_sha1": "f30eee267984bba86829f885f3d947e8bcbd5214",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 1719,
+      "sha256": "55d9e6e581e214b0f07bcb57116347d02ee9e67f9d4a23ae0f45584f06545834",
+      "git_blob_sha1": "f1c781639cf2c3ee7bebdd40665de08661777888",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/SKILL.md"
+    },
+    {
+      "path": "VALIDATION.md",
+      "size_bytes": 855,
+      "sha256": "d03fe6b15921216ac64c3abe4afd2340515bf1ff1a3ce9bf8c3f670af6b8b1ce",
+      "git_blob_sha1": "15f638df9e0a6620639f109e606e5fce10a04df2",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/VALIDATION.md"
+    },
+    {
+      "path": "_support.py",
+      "size_bytes": 6766,
+      "sha256": "ce5feab729b0dc2ab1019bb1808f06795e9c5cd98a220c61dcc464275938eca4",
+      "git_blob_sha1": "b52ce55f79b8b6eedf382eb6b12f60d1fb5f8291",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/_support.py"
+    },
+    {
+      "path": "examples/run_examples.py",
+      "size_bytes": 644,
+      "sha256": "daaa7b7ee5825a49c9f327962de77097b45cc4ae53ee6e3f636b7d674351b20e",
+      "git_blob_sha1": "0f61c843cc2c65316a0faab5f9c0e2ae7432eba1",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/examples/run_examples.py"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 4424,
+      "sha256": "75f4b131ae29d3188e556d6db8c0b85c24f8e7f5f0bbf5a67a440ea1821d9c22",
+      "git_blob_sha1": "0c63034cb1dd4fec26b4fc0ff89f97079e246bbd",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 2246,
+      "sha256": "64f704765f1628fe920c3ecb27f59ad4da9378c7eace9655130fda837a2a5b43",
+      "git_blob_sha1": "9f2f2e6de727b2716edbaef52bea4da6f5b4841c",
+      "utf8": true,
+      "source_path": "tools/encoding-roundtrip-audit/tool.py"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README synthetic positive/negative runner",
+      "args": [
+        "examples/run_examples.py"
+      ],
+      "expected_exit": 0,
+      "output": "example-json",
+      "documented_command": "python3 examples/run_examples.py"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}
